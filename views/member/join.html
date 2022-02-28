@@ -1,0 +1,38 @@
+{% extends "../layout.html" %}
+
+	{% block content %}
+			<form method = 'post' action='/member/join' target='iframHidden'>
+				<dl>
+					<dt>아이디</dt>
+					<dd>
+						<input type='text' name='memId' placeholder="아이디">
+					</dd>
+				</dl>
+				<dl>
+					<dt>비밀번호</dt>
+					<dd>
+						<input type='password' name='memPw' placeholder="비밀번호">
+					</dd>
+				</dl>	
+				<dl>
+					<dt>비밀번호 확인</dt>
+					<dd>
+						<input type='password' name='memPwRe' placeholder="비밀번호 확인">
+					</dd>
+				</dl>	
+				<dl>
+					<dt>이름</dt>
+					<dd>
+						<input type='text' name='memNm' placeholder="이름">
+					</dd>
+				</dl>
+				<dl>
+					<dt>주민번호</dt>
+					<dd>
+						<input type="number" name='memFNum' placeholder='주민번호 앞자리'> - 
+						<input type="number" name='memBNum' placeholder='주민번호 뒷자리'>
+					</dd>
+				</dl>
+				<input type='submit' value='회원가입'>
+			</form>
+		{% endblock %}
